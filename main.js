@@ -1,7 +1,31 @@
 // ┌─────────────────┐
 // │ Your code here! │	
 // └─────────────────┘
+function isAdmin(user) {
+    if (user.userRole === "ADMIN") {
+        return true;
+    } else {
+        return false;
+    }
+}
 
+function getEmail(user) {
+    return user.firstName.concat(".", user.lastName, "@codeimmersives.com").toLowerCase();
+}
+
+function getPlaylistLength(list) {
+    return list.songs.length;
+}
+
+function getHardestHomework(hardest) {
+    hardest.reduce(function (sol, obj) {
+        if (obj.averageScore < sol.averageScore) {
+            return obj.name;
+        } else {
+            return sol.name;
+        } 
+    })
+}
 
 
 // ┌─────────────────────────────────────┐
